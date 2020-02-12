@@ -25,15 +25,15 @@ app.get('/location/:color/:car', (req, res) => {
         { city: 'Stanford', state: 'Connecticut' },
         { city: 'New York', state: 'NY' },
         { city: 'Las Vegas', state: 'Nevada' },
-    ]
+    ];
     const { color, car } = req.params;
     res.render('main/location', { color, car, places, firstName, lastName });
 });
 
 app.get('/users', (req, res) => {
-    const { name, city } = users
+    const { name, city } = users;
     res.render('main/users', { name, city, users });
-})
+});
 
 app.listen(port, (req, res) => {
     console.log(`Listening on port ${port}`);
