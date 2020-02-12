@@ -31,8 +31,7 @@ app.get('/location/:color/:car', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-    const { name, city } = users;
-    res.render('main/users', { name, city, users });
+    res.render('main/users', { users });
 });
 
 app.listen(port, (req, res) => {
