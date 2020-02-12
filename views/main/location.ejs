@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style.css" type="text/css"/>
+    </head>
+    <body>
+        <%- include('../partials/header') %> 
+        <h1 style='color:blue'> <%= `${firstName} ${lastName}` %> </h1>
+        <p> <%= color %>, <%= car %> </p>
+        <img src="/assets/GTR.jpg" alt="GTR">
+        <div>
+            <ul>
+            <% places.forEach(({city, state}, idx) => {%> 
+                <ol><%= idx + 1 %>. <%= city %>, <%= state %></ol>
+            <%}) %>
+            </ul>
+        </div>
+    </body>
+</html>
